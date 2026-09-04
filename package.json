@@ -5,13 +5,13 @@
   "scripts": {
     "prepare": "husky",
     "predev": "node scripts/generate-commit-info.mjs",
-    "dev": "next dev --turbo",
-    "build": "node scripts/generate-commit-info.mjs && next build",
+    "dev": "node init && next dev --turbo",
+    "build": "node init && node scripts/generate-commit-info.mjs && next build",
     "precheck": "node scripts/generate-commit-info.mjs",
     "test": "vitest run",
     "test:watch": "vitest",
     "postbuild": "next-sitemap",
-    "start": "next start",
+    "start": "node init && next start",
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
@@ -40,7 +40,7 @@
     "bundle:check": "node scripts/bundle/check-bundle-size.js",
     "vercel:ignore:test": "bash scripts/vercel-ignore-regression.sh",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "node init && storybook build"
   },
   "type": "module",
   "dependencies": {

@@ -44,7 +44,6 @@
 /.commandcode/
 
 # editor settings (local-only)
-/.vscode/
 
 # debug
 npm-debug.log*
@@ -55,7 +54,6 @@ dev-output.log
 zizmor-report.json
 
 # env files (can opt-in for committing if needed)
-.env*
 
 # vercel
 .vercel
@@ -76,3 +74,7 @@ next-env.d.ts
 
 # Sentry Config File
 .env.sentry-build-plugin
+branch_structure.json
+temp_auto_push.bat
+temp_interactive_push.bat
+config.bat
